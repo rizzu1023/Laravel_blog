@@ -2,14 +2,19 @@
 
 
 @section('content')
-<div class="container mt-5">
+<div class="mt-5">
 <h3>Services</h3>
-<ul></ul>
-    <li>1</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-</ul>
+
+@if(count($services) > 0)
+
+    <ul class="list-group">
+        @foreach($services as $service) 
+            <li class="list-group-item">{{ $service }}</li>
+        @endforeach
+    </ul>
+
+@endif
+
 </div>
 
 @endsection

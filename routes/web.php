@@ -1,9 +1,10 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('pages.index');
+// });
 
+Route::get('/','PagesController@getIndex');
 
 Route::get('/about','PagesController@getAbout');
 

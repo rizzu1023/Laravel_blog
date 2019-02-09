@@ -8,6 +8,13 @@ use Illuminate\Http\Response;
 
 class PagesController extends Controller
 {
+    public function getIndex(Request $request,Response $response){
+        $title = 'Index';
+        return view("pages.index")->with('title',$title);
+    }
+
+
+
     public function getContact(Request $request, Response $response){
         $title = 'Contact';
         return view('pages.contact', compact('title'));   //1st method
@@ -22,7 +29,8 @@ class PagesController extends Controller
 
     public function getServices(Request $request, Response $response){
         $data = array(
-            'title' => 'Services'
+            'title' => 'Services',
+            'services' => ['web design', 'Programming', 'SEO', 'MachineLearning'],
         );
         return view('pages.services')->with($data);   //3rd method
     }
