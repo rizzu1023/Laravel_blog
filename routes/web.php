@@ -5,11 +5,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', function() {
-    return view('about');
-});
+Route::get('/about','ContactController@getAbout');
 
-Route::get('/contact', function(){
-    return view('contact');
-});
+Route::get('/contact','ContactController@getContact');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
