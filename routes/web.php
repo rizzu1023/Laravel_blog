@@ -5,9 +5,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about','ContactController@getAbout');
+Route::get('/about','PagesController@getAbout');
 
-Route::get('/contact','ContactController@getContact');
+Route::get('/contact','PagesController@getContact');
+
+Route::get('/services','PagesController@getServices');
 
 
 Auth::routes();
