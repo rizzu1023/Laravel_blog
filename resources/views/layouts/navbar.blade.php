@@ -30,6 +30,9 @@
               </div>
             </li> --}}
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/posts/create">Create Post</a></li>
+          </ul>
             {{-- <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>

@@ -17,6 +17,7 @@
     </header>
         <main>
         <div class="container">
+            @include('posts.messages')
             @yield('content')
         </div>
     </main>
