@@ -2,5 +2,5 @@
 
 @section('content')
 
-<h1 class="mt-5">Home Page</h1>
+<h1>Home Page</h1>
 @endsection

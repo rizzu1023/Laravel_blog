@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <div class="container box mt-5">
+    <div class="container">
         <form action="#" class="" >
             Name: <input type="name" class="form-control w-50"/>
             Contact: <input type="number" class="form-control w-50"/>

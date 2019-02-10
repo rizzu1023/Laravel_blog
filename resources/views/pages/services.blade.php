@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="mt-5">
+
 <h3>Services</h3>
 
 @if(count($services) > 0)
@@ -15,6 +15,5 @@
 
 @endif
 
-</div>
 
 @endsection
