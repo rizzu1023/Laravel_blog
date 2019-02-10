@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
       <h3>Technical</h3>
