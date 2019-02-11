@@ -1,0 +1,11 @@
+*{
+font-family: 'Coda', cursive;
+}
+input{
+    margin-top: 5px;
+}
+
+
+nav ul li a{
+    text-transform: uppercase;
+}

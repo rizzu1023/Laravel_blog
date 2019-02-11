@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Auth;
 // use DB;
 
 class PostsController extends Controller
@@ -81,6 +82,13 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+        // dd(Auth::user());
+        // dd($post->user_id);
+        //check for correct user
+        if($post->user_id !== null){
+
+            return redirect('/posts')->with('error','Unautherized Page');
+        }
         return view('posts.edit')->with('post',$post);
     }
 
@@ -112,6 +120,9 @@ class PostsController extends Controller
     {
         //delte post
         $post = Post::find($id);
+        if($post->user_id !== null){
+            return redirect('/posts')->with('error','Unautherized Page');
+        }
         $post->delete();
         return redirect('/posts')->with('success','Post Successfully Deleted');
     }
